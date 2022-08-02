@@ -1,7 +1,12 @@
 import React from "react";
+import propTypes from 'prop-types';
 import { Drawing } from "../../../assets/icons";
 import './styles.scss';
 
+
+/**
+ * @visibleName Loading image indicator: used when the card is loading image
+ */
 
 const LoadingImageIndicator = () => {
 
@@ -13,3 +18,9 @@ const LoadingImageIndicator = () => {
 }
 
 export default LoadingImageIndicator;
+
+LoadingImageIndicator.propTypes = {
+  /** An object with data of the artwork */
+};
+
+LoadingImageIndicator.defaultProps = null;
