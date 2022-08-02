@@ -1,3 +1,8 @@
 module.exports = {
-  components: 'src/components/**/[A-Z]*.jsx'
+  sections: [
+    {
+      name: 'Atoms',
+      components: 'src/components/atoms/**/[A-Z]*.jsx',
+    },
+  ]
 }

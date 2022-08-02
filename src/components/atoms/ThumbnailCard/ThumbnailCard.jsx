@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import './styles.scss';
 
 
@@ -12,7 +12,6 @@ const ThumbnailCard = ({
 }) => {
 
   const {
-    isLoading,
     sourceUrl,
     title,
     author,
@@ -39,16 +38,22 @@ const ThumbnailCard = ({
 
 export default ThumbnailCard;
 
-ThumbnailCard.PropTypes = {
-  /** No user action on button is allowed */
-  artwork: PropTypes.object
+ThumbnailCard.propTypes = {
+  /** An object with data of the artwork */
+  artwork: propTypes.shape ({
+    /** url to the thumbnail */
+    sourceUrl: propTypes.string,
+    /** artwork's title */
+    title: propTypes.string,
+    /** artwork's name */
+    author: propTypes.string,
+  })
 };
 
 ThumbnailCard.defaultProps = {
   artwork: {
-    isLoading: false,
-    sourceUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg/1200px-Johannes_Vermeer_%281632-1675%29_-_The_Girl_With_The_Pearl_Earring_%281665%29.jpg',
-    title: 'Girl with a Pearl Earring',
-    author: 'Johannes Vermeer',
+    sourceUrl: '',
+    title: '',
+    author: '',
   }
 };
