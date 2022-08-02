@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from "react";
+import propTypes from 'prop-types';
 import {
   ThumbnailCard,
   LoadingImageIndicator
 } from '../../atoms';
 import './styles.scss';
 
+
+/**
+ * @visibleName Thumbnail item: thumbnail of each artwork, changing in terms of leading state
+ */
 
 const renderAtom = (isLoading, artwork) => {
   if(isLoading) return <LoadingImageIndicator />
@@ -44,3 +49,12 @@ const ThumbnailItem = ({time}) => {
 }
 
 export default ThumbnailItem;
+
+ThumbnailItem.propTypes = {
+  /** This is temporal, to simulate slow response from the API */
+  time: propTypes.number
+};
+
+ThumbnailItem.defaultProps = {
+  time: 0
+};
