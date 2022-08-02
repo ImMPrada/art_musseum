@@ -1,4 +1,5 @@
 import React from "react";
+import { Drawing } from "../../../assets/icons";
 import './styles.scss';
 
 
@@ -6,7 +7,7 @@ const LoadingImageIndicator = () => {
 
   return (
     <div className="loadin-image-indicator">
-      <h1>HOLA MUNDO</h1>
+      <Drawing />
     </div>
   )
 }
