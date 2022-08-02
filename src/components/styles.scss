@@ -1,6 +1,0 @@
-@use '../assets/styles/fonts';
-
-h1 {
-  color: red;
-  @include fonts.bold-font(200px, 100px);
-}
