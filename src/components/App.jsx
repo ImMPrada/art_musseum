@@ -1,9 +1,14 @@
 import React from 'react';
-import { ThumbnailCard } from './atoms';
+import { 
+  ThumbnailCard, 
+  LoadingImageIndicator 
+} from './atoms';
 import '../assets/styles/main.scss'
 
 const App = () => (
   <div id="example">
+
+    <LoadingImageIndicator />
     <ThumbnailCard 
       artwork =  {{
         isLoading: false,
