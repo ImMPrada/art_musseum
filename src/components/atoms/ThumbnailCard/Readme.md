@@ -1,5 +1,5 @@
 ```jsx
-  <div style={{width: '250px'}}>
+  <div style={{width: '300px'}}>
     <ThumbnailCard 
       artwork =  {{
         isLoading: false,
