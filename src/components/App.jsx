@@ -1,7 +1,10 @@
 import React from 'react';
+import { ThumbnailCard } from './atoms';
 import '../assets/styles/main.scss'
 import './styles.scss'
 
-const App = () => <h1>Hola Mundo</h1>;
+const App = () => (
+  <ThumbnailCard />
+);
 
 export default App;
