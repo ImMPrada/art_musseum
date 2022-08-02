@@ -5,7 +5,9 @@ import './styles.scss';
 const LoadingImageIndicator = () => {
 
   return (
-    <h1>HOLA MUNDO</h1>
+    <div className="loadin-image-indicator">
+      <h1>HOLA MUNDO</h1>
+    </div>
   )
 }
 

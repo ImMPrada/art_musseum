@@ -3,7 +3,10 @@ import { LoadingImageIndicator } from './atoms';
 import '../assets/styles/main.scss'
 
 const App = () => (
-  <LoadingImageIndicator />
+  <div id="test">
+
+    <LoadingImageIndicator />
+  </div>
 );
 
 export default App;
