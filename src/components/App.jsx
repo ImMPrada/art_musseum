@@ -1,5 +1,5 @@
 import React from 'react';
-import { ThumbnailCard } from './atoms';
+import { ThumbnailCard, LoadingImageIndicator } from './atoms';
 import '../assets/styles/main.scss'
 
 const App = () => (
@@ -36,6 +36,7 @@ const App = () => (
         author: 'Johannes Vermeer',
       }}
     />
+    <LoadingImageIndicator />
   </div>
 );
 
