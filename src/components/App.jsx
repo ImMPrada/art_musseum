@@ -1,10 +1,13 @@
 import React from 'react';
 import { ThumbnailCard } from './atoms';
 import '../assets/styles/main.scss'
-import './styles.scss'
 
 const App = () => (
-  <ThumbnailCard />
+  <>
+    <ThumbnailCard />
+    <ThumbnailCard />
+    <ThumbnailCard />
+  </>
 );
 
 export default App;
