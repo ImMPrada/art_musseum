@@ -2,7 +2,16 @@ import React from "react";
 import './styles.scss';
 
 
-const ThumbnailCard = () => {
+const ThumbnailCard = ({
+  artwork
+}) => {
+
+  const {
+    isLoading,
+    sourceUrl,
+    title,
+    author,
+  } = artwork
 
   return (
     <div className="thumbnail-card">
@@ -11,13 +20,13 @@ const ThumbnailCard = () => {
         </div>
         <div className="thumbnail-card__over">
           <h3 className="thumbnail-card__over__title">
-            Starry Night
+            {title}
           </h3>
           <h4 className="thumbnail-card__over__artist">
-            Vincent Van Gogh
+            {author}
           </h4>
         </div>
-        <img src='https://concepto.de/wp-content/uploads/2018/02/artes-plasticas-cuadro-min-e1519328319772.jpg' alt="" />
+        <img src={sourceUrl} alt="" />
       </div>
     </div>
   )
