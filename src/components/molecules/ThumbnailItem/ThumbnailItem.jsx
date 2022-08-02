@@ -16,7 +16,7 @@ const renderAtom = (isLoading, artwork) => {
   )
 }
 
-const ThumbnailItem = () => {
+const ThumbnailItem = ({time}) => {
   const [isLoading, setIsLoading] = useState(true);
   const [artwork, setArtWork] = useState(null);
 
@@ -29,7 +29,7 @@ const ThumbnailItem = () => {
     })
   )
 
-  useEffect(() => {setTimeout(newArtwork, 2000)}, [])
+  useEffect(() => {setTimeout(newArtwork, time)}, [])
   
   useEffect(() => {
     if(artwork) setIsLoading(false)
