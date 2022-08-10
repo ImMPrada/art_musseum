@@ -1,13 +1,17 @@
 import React from "react";
+import propTypes from 'prop-types';
 import './styles.scss';
 
+
+/**
+ * @visibleName Thumbnail card: used at the galeri page
+ */
 
 const ThumbnailCard = ({
   artwork
 }) => {
 
   const {
-    isLoading,
     sourceUrl,
     title,
     author,
@@ -33,3 +37,23 @@ const ThumbnailCard = ({
 }
 
 export default ThumbnailCard;
+
+ThumbnailCard.propTypes = {
+  /** An object with data of the artwork */
+  artwork: propTypes.shape ({
+    /** url to the thumbnail */
+    sourceUrl: propTypes.string,
+    /** artwork's title */
+    title: propTypes.string,
+    /** artwork's name */
+    author: propTypes.string,
+  })
+};
+
+ThumbnailCard.defaultProps = {
+  artwork: {
+    sourceUrl: '',
+    title: '',
+    author: '',
+  }
+};
